@@ -7,32 +7,6 @@ on AWS and Kubernetes. I work across the whole life of an LLM feature: designing
 giving it the right tools and data, checking that it answers well, and running it in
 production.
 
-## 🧠 What I work on
-
-<table>
-  <tr>
-    <td width="50%"><b>Agents and tool use</b><br>LangGraph agents that plan, call tools and hand off work; tools as typed functions that can be tested on their own.</td>
-    <td width="50%"><b>RAG and grounding</b><br>Retrieval over documents and SQL over databases, so answers come with their sources instead of the model's memory.</td>
-  </tr>
-  <tr>
-    <td width="50%"><b>Evaluation</b><br>Fixtures with known answers and regression tests, so a prompt or model change is measured before it ships.</td>
-    <td width="50%"><b>Open and local models</b><br>OpenAI-compatible providers, Ollama and vLLM; one setting moves a task between a local server and a hosted model.</td>
-  </tr>
-  <tr>
-    <td width="50%"><b>LLMs in production</b><br>Streaming, timeouts and retries, deployment, and tracing with Langfuse to see every prompt, tool call and cost.</td>
-    <td width="50%"><b>AI-assisted engineering</b><br>Claude Code with custom skills, and AI code review inside the merge-request workflow.</td>
-  </tr>
-</table>
-
-## 🧭 How I build AI
-
-- **The model drafts, a person decides.** The people accountable for a result accept, edit
-  or discard what an agent proposes.
-- **Answers come from data.** Numbers and facts come from tools, not from the model.
-- **Rules live in code.** Domain rules belong in tested functions, not hidden in a prompt.
-- **Small and open first.** Start with the smallest open model that does the job, and
-  measure before moving up.
-
 ## 🔬 Selected project
 
 **[Mawta](https://github.com/amaru-one/mawta)** — an open-source gradebook for Peruvian
