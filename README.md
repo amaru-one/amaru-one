@@ -10,9 +10,16 @@ production.
 ## 🔬 Selected project
 
 **[Mawta](https://github.com/amaru-one/mawta)** — an open-source gradebook for Peruvian
-schools. Agents draft term plans and descriptive conclusions for teachers to review, and a
-LangGraph chat answers school directors' questions through read-only SQL tools, all on
-open models.
+schools, where AI drafts and the teacher decides. One Python service per school: agents draft
+term plans and descriptive conclusions for teachers to review, and a LangGraph chat answers
+school directors' questions through read-only SQL tools, on open models.
+
+- **A boundary the model cannot cross:** the chat's tools run as a Postgres role that can read
+  only a set of views, entered with `SET LOCAL ROLE` inside the transaction.
+- **Schema as code:** typed SQLAlchemy models, SQLAlchemy Core queries and Alembic migrations
+  checked in CI, with one database per school.
+- **Rules as tested code:** the national promotion rules and "at risk" definitions live in the
+  tools, each with its own test case.
 
 ## 🛠️ Toolbox
 
